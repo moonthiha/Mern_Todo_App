@@ -1,6 +1,6 @@
 import { TodoType } from "../types/todo";
 
-const API_URL = import.meta.env.VITE_MODE === "development" ? import.meta.env.VITE_LOCAL_API_URL : import.meta.env.VITE_API_URL;
+const API_URL = import.meta.env.VITE_MODE === "development" ? import.meta.env.VITE_LOCAL_API_URL : "https://mern-todo-app-vbs9.onrender.com/";
 console.log(API_URL);
 
 export const getData = async () :Promise<TodoType[]> => {
