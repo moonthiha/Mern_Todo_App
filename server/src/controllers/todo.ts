@@ -33,6 +33,9 @@ export const getSingleTodo = async (req : Request , res : Response) => {
 export const getAllTodo = async (req : Request , res : Response) => {
     try {
         const getAllData = await Todo.find();
+        if(!getAllData){
+            return;
+        };
         res.status(200).json({message : 'Searching All Todo', data : getAllData});
         
     } catch (error) {
